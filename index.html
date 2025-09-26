@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salford School of Motoring</title>
+    <meta
+      name="description"
+      content="Professional driving schools near Salford offering expert instruction, flexible scheduling, and comprehensive driving courses."
+    />
+    <meta
+      name="keywords"
+      content="Salford driving school, driving lessons Salford, manual driving lessons, automatic driving lessons, Pass Plus Salford, refresher driving lessons, theory test preparation Salford, Matt Tantrum driving instructor"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-blue-200/20 via-gray-50 to-blue-100/10 relative font-sans"
+  >
+    <!-- Background Circles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        class="absolute -top-20 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-300/10 rounded-full blur-3xl"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="bg-white/95 backdrop-blur-lg border-b border-blue-200 sticky top-0 z-50 shadow-lg"
+    >
+      <nav class="container mx-auto px-4 py-3 sm:py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-car text-blue-600 text-2xl"></i>
+            <h1 class="text-xl font-bold text-blue-900">
+              Salford School of Motoring
+            </h1>
+          </div>
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="about.html"
+              class="text-blue-900 hover:text-blue-600 transition-colors relative"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-blue-900 hover:text-blue-600 transition-colors relative"
+              >Services</a
+            >
+            <a
+              href="gallery.html"
+              class="text-blue-900 hover:text-blue-600 transition-colors relative"
+              >Gallery</a
+            >
+            <a
+              href="#contact"
+              class="text-blue-900 hover:text-blue-600 transition-colors relative"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition flex items-center"
+            >
+              <i class="fa-solid fa-phone mr-2"></i> Book Now
+            </a>
+          </div>
+          <!-- Hamburger menu button (mobile) -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-blue-900 focus:outline-none p-2 rounded hover:bg-blue-100"
+          >
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden fixed top-0 left-0 w-full h-full bg-white/95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-blue-900 hidden"
+        >
+          <button
+            id="mobile-menu-close"
+            class="absolute top-6 right-6 text-3xl hover:text-blue-600 focus:outline-none"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <a
+            href="about.html"
+            class="hover:text-blue-600 transition"
+            onclick="closeMobileMenu()"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="hover:text-blue-600 transition"
+            onclick="closeMobileMenu()"
+            >Services</a
+          >
+          <a
+            href="gallery.html"
+            class="hover:text-blue-600 transition"
+            onclick="closeMobileMenu()"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-blue-600 transition"
+            onclick="closeMobileMenu()"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="bg-blue-600 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition flex items-center"
+            onclick="closeMobileMenu()"
+          >
+            <i class="fa-solid fa-phone mr-2"></i> Book Now
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="px-4 md:px-8">
+      <!-- Hero -->
+      <section class="relative py-20 sm:py-28 md:py-32 px-4 text-center">
+        <div class="container mx-auto relative z-10">
+          <h2
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-900 mb-4 sm:mb-6 leading-tight"
+          >
+            Learn to drive with
+            <span class="block text-blue-600 animate-pulse">confidence</span>
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Professional driving instruction in Saltford and surrounding areas.
+            Start your journey to independence with our expert instructors.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <a
+              href="#contact"
+              class="bg-blue-600 text-white text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-lg shadow-xl hover:bg-blue-700 transition flex items-center justify-center"
+            >
+              <i class="fa-solid fa-bolt mr-2"></i> Start Learning Today
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+            <a
+              href="tel:+447377856688"
+              class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-lg shadow-xl transition flex items-center justify-center"
+            >
+              Call now
+            </a>
+          </div>
+        </div>
+        <!-- Floating circles -->
+        <div
+          class="absolute top-10 sm:top-20 right-10 sm:right-20 w-14 sm:w-20 h-14 sm:h-20 bg-blue-400/20 rounded-full blur-xl animate-bounce"
+        ></div>
+        <div
+          class="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-10 sm:w-16 h-10 sm:h-16 bg-blue-300/20 rounded-full blur-lg animate-bounce"
+        ></div>
+      </section>
+
+      <!-- Features -->
+      <section id="about" class="py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto">
+          <h3
+            class="text-3xl sm:text-4xl font-bold text-center text-blue-900 mb-8 sm:mb-12 md:mb-16"
+          >
+            Why Choose Salford School of Motoring?
+          </h3>
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-8 sm:mb-12">
+            Hi, I'm Matt Tantrum, a fully qualified DVSA-approved driving
+            instructor dedicated to helping learners in Salford gain the skills
+            and confidence to pass their test and drive safely for life.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-white/80 shadow rounded-lg p-6">
+              <i
+                class="fa-solid fa-shield-halved text-blue-600 text-4xl mb-4"
+              ></i>
+              <h4 class="text-2xl font-semibold text-blue-900 mb-2">
+                DVSA Approved
+              </h4>
+              <p class="text-gray-600">
+                All our instructors are fully qualified and approved by the
+                DVSA, ensuring the highest standards of training.
+              </p>
+            </div>
+            <div class="bg-white/80 shadow rounded-lg p-6">
+              <i class="fa-regular fa-clock text-blue-600 text-4xl mb-4"></i>
+              <h4 class="text-2xl font-semibold text-blue-900 mb-2">
+                Flexible Scheduling
+              </h4>
+              <p class="text-gray-600">
+                Book lessons at times that suit you, including evenings and
+                weekends. We work around your schedule.
+              </p>
+            </div>
+            <div class="bg-white/80 shadow rounded-lg p-6">
+              <i class="fa-solid fa-award text-blue-600 text-4xl mb-4"></i>
+              <h4 class="text-2xl font-semibold text-blue-900 mb-2">
+                High Pass Rate
+              </h4>
+              <p class="text-gray-600">
+                Our proven teaching methods and experienced instructors help
+                achieve an outstanding first-time pass rate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        id="services"
+        class="py-12 sm:py-16 md:py-20 px-4 bg-blue-100/20"
+      >
+        <div class="container mx-auto">
+          <h3
+            class="text-3xl sm:text-4xl font-bold text-center text-blue-900 mb-8 sm:mb-12 md:mb-16"
+          >
+            Our Services
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div
+              class="bg-white/90 shadow rounded-lg p-6 w-full sm:w-[300px] md:w-[400px] mx-auto"
+            >
+              <img
+                src="assets/a.png"
+                alt="Manual Lessons"
+                class="w-full h-auto max-h-52 object-cover rounded-lg mb-2"
+              />
+              <i class="fa-solid fa-car text-blue-600 text-2xl mb-2"></i>
+              <h4 class="text-2xl font-semibold text-blue-900">
+                Manual Lessons
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Learn in a modern manual transmission vehicle with dual
+                controls.
+              </p>
+            </div>
+            <div
+              class="bg-white/90 shadow rounded-lg p-6 w-full sm:w-[300px] md:w-[400px] mx-auto"
+            >
+              <img
+                src="assets/b.png"
+                alt="Automatic Lessons"
+                class="w-full h-auto max-h-52 object-cover rounded-lg mb-2"
+              />
+              <i class="fa-solid fa-bolt text-blue-600 text-2xl mb-2"></i>
+              <h4 class="text-2xl font-semibold text-blue-900">
+                Automatic Lessons (in student's own car)
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Smooth learning experience with your own automatic transmission
+                car.
+              </p>
+            </div>
+            <div
+              class="bg-white/90 shadow rounded-lg p-6 w-full sm:w-[300px] md:w-[400px] mx-auto"
+            >
+              <img
+                src="assets/c.png"
+                alt="Pass Plus"
+                class="w-full h-auto max-h-52 object-cover rounded-lg mb-2"
+              />
+              <i class="fa-solid fa-award text-blue-600 text-2xl mb-2"></i>
+              <h4 class="text-2xl font-semibold text-blue-900">Pass Plus</h4>
+              <p class="text-gray-600 text-sm">
+                Additional training after passing your test for safer driving.
+              </p>
+            </div>
+            <div
+              class="bg-white/90 shadow rounded-lg p-6 w-full sm:w-[300px] md:w-[400px] mx-auto"
+            >
+              <img
+                src="assets/e.png"
+                alt="Refresher Lessons"
+                class="w-full h-auto max-h-52 object-cover rounded-lg mb-2"
+              />
+              <i class="fa-solid fa-users text-blue-600 text-2xl mb-2"></i>
+              <h4 class="text-2xl font-semibold text-blue-900">
+                Refresher Lessons
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Build confidence for drivers returning to the road.
+              </p>
+            </div>
+            <div
+              class="bg-white/90 shadow rounded-lg p-6 w-full sm:w-[300px] md:w-[400px] mx-auto"
+            >
+              <img
+                src="assets/d.png"
+                alt="Theory Test Prep"
+                class="w-full h-auto max-h-52 object-cover rounded-lg mb-2"
+              />
+              <i class="fa-solid fa-book-open text-blue-600 text-2xl mb-2"></i>
+              <h4 class="text-2xl font-semibold text-blue-900">
+                Theory Test Prep
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Comprehensive preparation for your theory and hazard perception
+                tests.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="py-12 sm:py-16 md:py-20 px-4 bg-white/50">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-12 md:mb-16 gap-4"
+          >
+            <h3 class="text-3xl sm:text-4xl font-bold text-blue-900">
+              Our Successful Students
+            </h3>
+            <a
+              href="gallery.html"
+              class="relative z-10 text-blue-600 hover:underline font-semibold"
+              >View More</a
+            >
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <img
+              src="assets/38.jpeg"
+              alt="Student 1"
+              class="rounded-lg shadow w-full h-auto max-h-80 object-cover object-center"
+            />
+            <img
+              src="assets/28.jpeg"
+              alt="Student 2"
+              class="rounded-lg shadow w-full h-auto max-h-80 object-cover object-center"
+            />
+            <img
+              src="assets/3.jpeg"
+              alt="Student 3"
+              class="rounded-lg shadow w-full h-auto max-h-80 object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Testimonials -->
+    <section
+      class="py-12 sm:py-16 md:py-20 px-4 bg-white/50 backdrop-blur-sm"
+      id="contact"
+    >
+      <div class="container mx-auto">
+        <h3
+          class="text-3xl sm:text-4xl font-bold text-center text-blue-900 mb-8 sm:mb-12 md:mb-16"
+        >
+          What Our Students Say
+        </h3>
+        <div
+          class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory py-2"
+        >
+          <div
+            class="bg-white/90 shadow p-6 rounded-lg w-full sm:w-[90%] md:w-[400px] snap-start flex-shrink-0"
+          >
+            <p class="text-gray-600 mb-4">
+              "Matt Tantrum helped me go from a completely inexperienced driver
+              to passing my test in 3 months, could not recommend more. Patient
+              and understanding whilst making sure you are learning properly."
+            </p>
+            <p class="font-semibold text-blue-900">- Charlie S</p>
+          </div>
+          <div
+            class="bg-white/90 shadow p-6 rounded-lg w-full sm:w-[90%] md:w-[400px] snap-start flex-shrink-0"
+          >
+            <p class="text-gray-600 mb-4">
+              "I can’t recommend Matt Tantrum enough! He’s patient, supportive,
+              and clear in his teaching, making learning to drive genuinely
+              enjoyable."
+            </p>
+            <p class="font-semibold text-blue-900">- Kasey</p>
+          </div>
+          <div
+            class="bg-white/90 shadow p-6 rounded-lg w-full sm:w-[90%] md:w-[400px] snap-start flex-shrink-0"
+          >
+            <p class="text-gray-600 mb-4">
+              "Matt Tantrum is a patient, approachable, and supportive driving
+              instructor who makes lessons relaxed and enjoyable. He balances
+              progress with comfort, is easy to chat with, and provides
+              excellent resources."
+            </p>
+            <p class="font-semibold text-blue-900">- Alex R</p>
+          </div>
+          <div
+            class="bg-white/90 shadow p-6 rounded-lg w-full sm:w-[90%] md:w-[400px] snap-start flex-shrink-0"
+          >
+            <p class="text-gray-600 mb-4">
+              "I passed first time with Matt Tantrum. He was patient and focused
+              on the aspects of driving I really struggled with, which
+              definitely helped me pass. He is easy to talk to and very
+              friendly. Could not recommend Matt Tantrum more! ❤"
+            </p>
+            <p class="font-semibold text-blue-900">- Reenie</p>
+          </div>
+          <div
+            class="bg-white/90 shadow p-6 rounded-lg w-full sm:w-[90%] md:w-[400px] snap-start flex-shrink-0"
+          >
+            <p class="text-gray-600 mb-4">
+              "Matt Tantrum is a brilliant, patient, and professional instructor
+              who explains clearly, keeps you calm, and makes learning
+              enjoyable. His guidance builds safety and confidence, even for
+              nervous learners."
+            </p>
+            <p class="font-semibold text-blue-900">- Jack P</p>
+          </div>
+          <!-- Add additional testimonial divs similarly if needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      class="py-20 sm:py-28 md:py-32 px-4 bg-gradient-to-r from-blue-900 to-blue-600 text-white"
+    >
+      <div class="container mx-auto">
+        <h3
+          class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16"
+        >
+          Ready to Start Your Journey?
+        </h3>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 md:gap-16 max-w-5xl mx-auto"
+        >
+          <div>
+            <div class="bg-white/10 p-6 rounded-xl shadow-lg">
+              <h4 class="text-2xl font-bold mb-4 sm:mb-6 text-blue-900">
+                Get In Touch
+              </h4>
+              <div class="space-y-4 sm:space-y-6">
+                <div class="flex items-center space-x-4">
+                  <i class="fa-solid fa-phone"></i>
+                  <span class="text-base sm:text-lg text-blue-900"
+                    >+44 7377 856688</span
+                  >
+                </div>
+                <div class="flex items-center space-x-4">
+                  <i class="fa-solid fa-map-pin"></i>
+                  <span class="text-base sm:text-lg text-blue-900"
+                    >Weston Twerton, Longwell Green, BS31 3AB</span
+                  >
+                </div>
+                <div class="flex items-center space-x-4">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <a
+                    href="https://wa.me/447377856688"
+                    class="text-base sm:text-lg underline text-blue-900"
+                    >WhatsApp Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-4 sm:mb-6">
+              Book Your First Lesson
+            </h4>
+            <p class="text-blue-200 mb-6 sm:mb-8">
+              Contact us today to book your first lesson or ask any questions
+              about our driving courses.
+            </p>
+            <div class="flex flex-col space-y-3 sm:space-y-4">
+              <a
+                href="tel:01179876543"
+                class="flex items-center gap-3 bg-white text-blue-900 px-4 py-3 rounded-full font-semibold shadow hover:bg-blue-200 transition"
+                ><i class="fa-solid fa-phone"></i> Call Us</a
+              >
+              <a
+                href="https://wa.me/447377856688"
+                class="flex items-center gap-3 bg-green-500 text-white px-4 py-3 rounded-full font-semibold shadow hover:bg-green-600 transition"
+                ><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-blue-200 pt-16">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-car text-blue-500 text-2xl"></i>
+            <span class="font-bold text-white text-xl"
+              >Salford School of Motoring</span
+            >
+          </div>
+          <p class="text-sm leading-relaxed">
+            Helping learners in Saltford and surrounding areas become safe,
+            confident drivers since 2022.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-xl text-white font-semibold mb-4">Quick Links</h5>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="about.html" class="hover:text-white transition">About</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-white transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-white transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-white transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h5 class="text-xl text-white font-semibold mb-4">Contact</h5>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i> +44 7377 856688
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/447377856688" class="hover:text-white"
+                >WhatsApp Us</a
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-map-pin"></i> Weston Twerton, Longwell
+              Green, BS31 3AB
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-blue-800 mt-12 py-6 text-center text-sm text-blue-400"
+      >
+        © 2024 Salford School of Motoring. All rights reserved.
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Navbar mobile menu functionality
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+    function closeMobileMenu() {
+      mobileMenu.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+    });
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+    // Also close menu on navigation
+    window.closeMobileMenu = closeMobileMenu;
+  </script>
+</html>
