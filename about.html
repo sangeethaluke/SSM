@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Matt Tantrum - Salford School of Motoring</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header
       class="bg-white/95 backdrop-blur-lg border-b border-blue-200 sticky top-0 z-50 shadow-lg"
     >
-      <nav class="container mx-auto px-4 py-4">
+      <nav class="container mx-auto px-4 py-3 sm:py-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-2">
             <i class="fa-solid fa-car text-blue-600 text-2xl"></i>
             <h1 class="text-xl font-bold text-blue-900">
-              Salford School of Motoring
+              Saltford School of Motoring
             </h1>
           </div>
+          <!-- Desktop Nav -->
           <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="index.html"
+              class="text-blue-900 hover:text-blue-600 transition-colors relative"
+              >Home</a
+            >
             <a
               href="about.html"
               class="text-blue-900 hover:text-blue-600 transition-colors relative"
@@ -35,64 +45,214 @@
               >Gallery</a
             >
             <a
-              href="#contact"
+              href="index.html#contact"
               class="text-blue-900 hover:text-blue-600 transition-colors relative"
               >Contact</a
             >
-            <button
-              href="#contact"
-              class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+          </div>
+          <!-- Hamburger menu button (mobile) -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-blue-900 focus:outline-none p-2 rounded hover:bg-blue-100"
+          >
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden fixed inset-0 bg-white/95 z-50 flex flex-col pt-24 px-6 space-y-4 text-xl font-semibold text-blue-900 hidden"
+        >
+          <button
+            id="mobile-menu-close"
+            class="absolute top-6 right-6 text-3xl hover:text-blue-600 focus:outline-none"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="bg-white rounded-lg shadow p-4 space-y-2">
+            <a
+              href="index.html"
+              class="block text-blue-900 px-4 py-2 rounded hover:bg-blue-100 transition"
+              onclick="closeMobileMenu()"
+              >Home</a
             >
-              <i class="fa-solid fa-phone mr-2"></i> Book Now
-            </button>
+            <a
+              href="about.html"
+              class="block text-blue-900 px-4 py-2 rounded hover:bg-blue-100 transition"
+              onclick="closeMobileMenu()"
+              >About</a
+            >
+            <a
+              href="index.html#services"
+              class="block text-blue-900 px-4 py-2 rounded hover:bg-blue-100 transition"
+              onclick="closeMobileMenu()"
+              >Services</a
+            >
+            <a
+              href="gallery.html"
+              class="block text-blue-900 px-4 py-2 rounded hover:bg-blue-100 transition"
+              onclick="closeMobileMenu()"
+              >Gallery</a
+            >
+            <a
+              href="index.html#contact"
+              class="block text-blue-900 px-4 py-2 rounded hover:bg-blue-100 transition"
+              onclick="closeMobileMenu()"
+              >Contact</a
+            >
           </div>
         </div>
       </nav>
     </header>
     <section id="about-matt" class="py-16 bg-gray-50">
-      <div
-        class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-4"
-      >
-        <div class="bio-image">
-          <img
-            src="images/matt-tantrum.jpg"
-            alt="Matt Tantrum Driving Instructor"
-            class="w-64 h-auto rounded-lg shadow-lg"
-          />
-        </div>
-        <div class="bio-text max-w-2xl">
-          <h1 class="text-3xl font-bold mb-4 text-gray-800">About Me</h1>
-          <p class="text-gray-700 mb-4">
-            Hello, and welcome to Saltford School of Motoring.
-          </p>
-          <p class="text-gray-700 mb-4">
-            My name is Matt Tantram, and I’m proud to provide driving lessons in
-            Saltford, Keynsham, and the surrounding areas. Having lived in both
-            Saltford and Keynsham all my life, I know the local roads inside out
-            and use that knowledge to give my students the best possible
-            learning experience.
-          </p>
-          <p class="text-gray-700 mb-4">
-            With nearly 40 years of driving experience, I bring both skill and
-            patience to every lesson. My teaching style is relaxed and
-            supportive, helping learners feel at ease behind the wheel so they
-            can build confidence at their own pace. I understand that everyone
-            learns differently, which is why I focus on creating a calm
-            environment where mistakes are simply part of the journey to
-            becoming a safe and capable driver.
-          </p>
-          <p class="text-gray-700 mb-4">
-            For me, it’s not just about passing the driving test—it’s about
-            giving you the tools and confidence to drive safely and
-            independently for life.
-          </p>
-          <p class="text-gray-700">
-            Whether you’re just starting out or looking to brush up on your
-            skills, my goal is simple: to help you become a safe, confident
-            driver—not just for your test, but for life.
-          </p>
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-10 max-w-6xl mx-auto"
+        >
+          <div class="flex-shrink-0">
+            <img
+              src="assets/matt.jpeg"
+              alt="Matt Tantrum Driving Instructor"
+              class="rounded-lg shadow-lg w-72 md:w-80"
+            />
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md flex-1 font-sans">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">About Me</h1>
+            <hr class="border-blue-300 mb-6" />
+            <p class="text-lg text-gray-700 mb-5">
+              Hello, and welcome to
+              <span class="font-semibold text-blue-600"
+                >Saltford School of Motoring</span
+              >.
+            </p>
+            <p class="text-lg text-gray-700 mb-5">
+              My name is
+              <span class="font-semibold text-blue-600">Matt Tantram</span>, and
+              I’m proud to provide driving lessons in Saltford, Keynsham, and
+              the surrounding areas. Having lived in both Saltford and Keynsham
+              all my life, I know the local roads inside out and use that
+              knowledge to give my students the
+              <span class="font-semibold"
+                >best possible learning experience</span
+              >.
+            </p>
+            <p class="text-lg text-gray-700 mb-5">
+              With nearly
+              <span class="font-semibold">40 years of driving experience</span>,
+              I bring both skill and patience to every lesson. My teaching style
+              is <span class="font-semibold">relaxed and supportive</span>,
+              helping learners feel at ease behind the wheel so they can build
+              confidence at their own pace. I understand that everyone learns
+              differently, which is why I focus on creating a calm environment
+              where mistakes are simply part of the journey to becoming a safe
+              and capable driver.
+            </p>
+            <p class="text-lg text-gray-700 mb-5">
+              For me, it’s not just about passing the driving test—it’s about
+              giving you the tools and confidence to drive safely and
+              independently for life.
+            </p>
+            <p class="text-lg text-gray-700 mb-8">
+              Whether you’re just starting out or looking to brush up on your
+              skills, my goal is simple: to help you become a
+              <span class="font-semibold">safe, confident driver</span>—not just
+              for your test, but for life.
+            </p>
+            <a
+              href="index.html#contact"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md"
+            >
+              Book a Lesson
+            </a>
+          </div>
         </div>
       </div>
     </section>
+    <footer class="bg-blue-950 text-blue-200 pt-16">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-car text-blue-500 text-2xl"></i>
+            <span class="font-bold text-white text-xl"
+              >Saltford School of Motoring</span
+            >
+          </div>
+          <p class="text-sm leading-relaxed">
+            Helping learners in Saltford and surrounding areas become safe,
+            confident drivers since 2022.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="text-center">
+          <h5 class="text-xl text-center text-white font-semibold mb-4">
+            Quick Links
+          </h5>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="about.html" class="hover:text-white transition">About</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-white transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-white transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-white transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="text-center">
+          <h5 class="text-xl text-white font-semibold text-center mb-4">
+            Contact
+          </h5>
+          <ul class="space-y-2 text-center text-sm flex flex-col items-center">
+            <li><i class="fa-solid fa-phone"></i> +44 7377 856688</li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/447377856688" class="hover:text-white"
+                >WhatsApp Us</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-map-pin"></i> Manor Road, Saltford, Bristol
+              BS31 3AB
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-blue-800 mt-12 py-6 text-center text-sm text-blue-400"
+      >
+        © 2025 Saltford School of Motoring. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      // Navbar mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      function closeMobileMenu() {
+        mobileMenu.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+      mobileMenuClose.addEventListener("click", closeMobileMenu);
+      // Also close menu on navigation
+      window.closeMobileMenu = closeMobileMenu;
+    </script>
   </body>
 </html>
