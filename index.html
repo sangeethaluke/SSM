@@ -190,6 +190,7 @@
     </header>
 
     <!-- Fullscreen Hero Image Section -->
+    <!-- Fullscreen Hero Image Section -->
     <section
       class="relative h-screen w-full flex items-center justify-center"
       data-aos="fade-in"
@@ -211,16 +212,22 @@
         class="absolute inset-0 bg-gradient-to-br from-black/70 via-blue-900/30 to-black/50"
       ></div>
 
-      <!-- Content -->
-      <div class="relative z-10 text-center text-white px-6">
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 text-white px-6 sm:text-center sm:mx-auto sm:flex sm:flex-col sm:items-center top-0 sm:top-auto mt-0 sm:mt-0"
+      >
+        <!-- Spacer only on mobile to push below header -->
+        <div class="block sm:hidden h-[70px]"></div>
+
         <h1
-          class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6 drop-shadow-lg transition-transform duration-500 hover:scale-[1.02]"
+          class="text-5xl -mt-56 pb-44 sm:mt-0 sm:pb-0 sm:text-6xl md:text-7xl font-extrabold mb-6 drop-shadow-lg transition-transform duration-500 hover:scale-[1.02]"
           data-aos="zoom-in"
         >
           Your Journey Starts Here
         </h1>
+
         <p
-          class="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-blue-100 leading-relaxed transition-opacity duration-500 hover:opacity-90"
+          class="text-lg sm:text-xl mt-10 md:text-2xl mb-10 max-w-2xl text-blue-100 leading-relaxed transition-opacity duration-500 hover:opacity-90"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -228,8 +235,9 @@
           <span class="font-semibold text-blue-300">Bristol</span> and
           <span class="font-semibold text-blue-300">Eastbourne</span>.
         </p>
+
         <div
-          class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
+          class="flex flex-col sm:flex-row justify-start sm:justify-center gap-4 sm:gap-6"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -1075,7 +1083,7 @@
                   <a
                     href="https://wa.me/07377856688"
                     class="text-base sm:text-lg underline"
-                    >WhatsApp Us</a
+                    >WhatsApp</a
                   >
                 </div>
               </div>
@@ -1093,12 +1101,12 @@
               <a
                 href="tel:07377856688"
                 class="flex items-center gap-3 bg-white text-blue-900 px-4 py-3 rounded-full font-semibold shadow hover:bg-blue-200 transition transition-transform duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95"
-                ><i class="fa-solid fa-phone"></i> Call Us</a
+                ><i class="fa-solid fa-phone"></i> Call</a
               >
               <a
                 href="https://wa.me/07377 856688"
                 class="flex items-center gap-3 bg-green-500 text-white px-4 py-3 rounded-full font-semibold shadow hover:bg-green-600 transition transition-transform duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95"
-                ><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a
+                ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
               >
             </div>
           </div>
@@ -1118,21 +1126,14 @@
         </p>
         <div class="flex justify-center gap-6">
           <a
-            href="https://www.facebook.com/yourpage"
+            href="https://www.facebook.com/Mattsdrivingschool71/"
             target="_blank"
             class="text-blue-600 hover:text-blue-800 transition transform hover:scale-110"
             aria-label="Facebook"
           >
             <i class="fa-brands fa-facebook fa-2xl"></i>
           </a>
-          <a
-            href="https://www.instagram.com/yourpage"
-            target="_blank"
-            class="text-pink-500 hover:text-pink-700 transition transform hover:scale-110"
-            aria-label="Instagram"
-          >
-            <i class="fa-brands fa-instagram fa-2xl"></i>
-          </a>
+
           <a
             href="https://wa.me/447377856688"
             target="_blank"
@@ -1192,11 +1193,11 @@
             Contact
           </h5>
           <ul class="space-y-2 text-center text-sm flex flex-col items-center">
-            <li><i class="fa-solid fa-phone"></i>07377 856688</li>
+            <li><i class="fa-solid fa-phone"></i> 07377 856688</li>
             <li>
               <i class="fa-brands fa-whatsapp"></i>
               <a href="https://wa.me/07377856688" class="hover:text-white"
-                >WhatsApp Us</a
+                >WhatsApp</a
               >
             </li>
             <li>
@@ -1335,31 +1336,3 @@
     });
   </script>
 </html>
-
-<section id="book" class="hidden">
-  <form class="max-w-lg mx-auto mt-8">
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      class="block w-full mb-4 p-3 rounded focus:scale-[1.02] focus:ring-2 focus:ring-blue-500 transition duration-300"
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      class="block w-full mb-4 p-3 rounded focus:scale-[1.02] focus:ring-2 focus:ring-blue-500 transition duration-300"
-    />
-    <textarea
-      name="message"
-      placeholder="Your Message"
-      class="block w-full mb-4 p-3 rounded focus:scale-[1.02] focus:ring-2 focus:ring-blue-500 transition duration-300"
-    ></textarea>
-    <button
-      type="submit"
-      class="bg-blue-600 text-white px-6 py-3 rounded transition-transform duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
-    >
-      Book Your Lesson
-    </button>
-  </form>
-</section>

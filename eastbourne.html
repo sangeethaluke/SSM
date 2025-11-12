@@ -95,6 +95,10 @@
         ]
       }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-50 text-gray-800 text-lg">
@@ -378,8 +382,7 @@
           </p>
           <p class="mb-6">
             Jim’s patience and relaxed teaching style make lessons enjoyable and
-            stress-free (his choice of clothes, however… questionable, sorry
-            Jim!).
+            stress-free.
           </p>
           <div class="flex flex-wrap gap-4 mt-6">
             <a
@@ -564,7 +567,7 @@
                   One-to-One Focus
                 </h4>
                 <p class="text-gray-600">
-                  Each lesson is personalized, ensuring every minute is spent
+                  Each lesson is personalised, ensuring every minute is spent
                   improving your driving skill and confidence.
                 </p>
               </div>
@@ -814,6 +817,37 @@
         </script>
       </section>
     </section>
+    <!-- Connect With Us Section -->
+    <section class="py-16 bg-blue-50">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
+          Connect with Us
+        </h3>
+        <p class="text-gray-700 mb-8">
+          Stay updated with our latest news, tips, and offers. Follow us on
+          social media!
+        </p>
+        <div class="flex justify-center gap-6">
+          <a
+            href="https://www.facebook.com/Mattsdrivingschool71/"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 transition transform hover:scale-110"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+          </a>
+
+          <a
+            href="https://wa.me/447377856688"
+            target="_blank"
+            class="text-green-500 hover:text-green-700 transition transform hover:scale-110"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
     <footer class="bg-blue-950 text-blue-200 pt-16">
       <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
         <!-- Brand -->
@@ -869,7 +903,7 @@
             <li>
               <i class="fa-brands fa-whatsapp"></i>
               <a href="https://wa.me/447308465453" class="hover:text-white"
-                >WhatsApp Us</a
+                >WhatsApp</a
               >
             </li>
             <li>
@@ -887,5 +921,22 @@
         © 2025 Saltford School of Motoring. All rights reserved.
       </div>
     </footer>
+    <script>
+      // Navbar mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      function closeMobileMenu() {
+        mobileMenu.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+      mobileMenuClose.addEventListener("click", closeMobileMenu);
+      // Also close menu on navigation
+      window.closeMobileMenu = closeMobileMenu;
+    </script>
   </body>
 </html>
